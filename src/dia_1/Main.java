@@ -152,98 +152,98 @@ public class Main {
 //
 //Cerrar sesión en el sistema.
 
-int opcion = 0;
-int capacidadTotal = 0;
-int dineroRecaudado = 0;
-
-        Scanner scanner = new Scanner(System.in);
-
-do {
-
-        System.out.println("ingrese una opcion");
-
-        System.out.println("1.Ingrese sus datos");
-        System.out.println("2.Capacidad disponbible");
-        System.out.println("3.Dinero recaudado");
-        System.out.println("0.Salir");
-
-         opcion = scanner.nextInt();
-
-
-        switch (opcion){
-            case 1 :
-                if(capacidadTotal < 500 ){
-                     scanner = new Scanner(System.in);
-
-                    System.out.println("ingrese su nombre");
-                    String nombre = scanner.nextLine();
-                    System.out.println("ingrese su DNI");
-                    int DNI = scanner.nextInt();
-                    System.out.println("ingrese su edad");
-                    int edad = scanner.nextInt();
-                    if ( edad >= 21){
-
-                        System.out.println("puedes entrar");
-
-                        System.out.println("tienes pase?");
-                        scanner = new Scanner(System.in);
-
-                        String pase = scanner.nextLine();
-
-                        if (pase.equals("si")){
-
-
-
-                            System.out.println("Tenes vip o normal?");
-
-                            pase = scanner.nextLine();
-                            if (pase.equals("vip")){
-                                System.out.println("Entras gratis");
-                                capacidadTotal++;
-                                dineroRecaudado += 2000;
-                            } else{
-                                System.out.println("entra ");
-                                capacidadTotal++;
-                                dineroRecaudado += 1500;
-
-                            }
-                        } else{
-                            System.out.println("Queres comprar un pase? vip o normal?");
-                            pase = scanner.nextLine();
-
-                            if (pase.equals("vip")){
-                                System.out.println("Entras gratis");
-                                capacidadTotal++;
-                                dineroRecaudado += 2000;
-                            } else{
-                                System.out.println("entra ");
-                                capacidadTotal++;
-                                dineroRecaudado += 1500;
-
-                            }
-                        }
-
-                    } else{
-                        System.out.println("adios");
-                    }
-
-                }  else {
-                    System.out.println("no pueden entrar mas personas");
-                }
-            break;
-            case 2:
-                System.out.println(500 - capacidadTotal );
-                break;
-            case 3:
-                System.out.println(dineroRecaudado);
-                break;
-
-
-
-        }
- } while(opcion != 0);
-
-        System.out.println("Adios");
+//int opcion = 0;
+//int capacidadTotal = 0;
+//int dineroRecaudado = 0;
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//do {
+//
+//        System.out.println("ingrese una opcion");
+//
+//        System.out.println("1.Ingrese sus datos");
+//        System.out.println("2.Capacidad disponbible");
+//        System.out.println("3.Dinero recaudado");
+//        System.out.println("0.Salir");
+//
+//         opcion = scanner.nextInt();
+//
+//
+//        switch (opcion){
+//            case 1 :
+//                if(capacidadTotal < 500 ){
+//                     scanner = new Scanner(System.in);
+//
+//                    System.out.println("ingrese su nombre");
+//                    String nombre = scanner.nextLine();
+//                    System.out.println("ingrese su DNI");
+//                    int DNI = scanner.nextInt();
+//                    System.out.println("ingrese su edad");
+//                    int edad = scanner.nextInt();
+//                    if ( edad >= 21){
+//
+//                        System.out.println("puedes entrar");
+//
+//                        System.out.println("tienes pase?");
+//                        scanner = new Scanner(System.in);
+//
+//                        String pase = scanner.nextLine();
+//
+//                        if (pase.equals("si")){
+//
+//
+//
+//                            System.out.println("Tenes vip o normal?");
+//
+//                            pase = scanner.nextLine();
+//                            if (pase.equals("vip")){
+//                                System.out.println("Entras gratis");
+//                                capacidadTotal++;
+//                                dineroRecaudado += 2000;
+//                            } else{
+//                                System.out.println("entra ");
+//                                capacidadTotal++;
+//                                dineroRecaudado += 1500;
+//
+//                            }
+//                        } else{
+//                            System.out.println("Queres comprar un pase? vip o normal?");
+//                            pase = scanner.nextLine();
+//
+//                            if (pase.equals("vip")){
+//                                System.out.println("Entras gratis");
+//                                capacidadTotal++;
+//                                dineroRecaudado += 2000;
+//                            } else{
+//                                System.out.println("entra ");
+//                                capacidadTotal++;
+//                                dineroRecaudado += 1500;
+//
+//                            }
+//                        }
+//
+//                    } else{
+//                        System.out.println("adios");
+//                    }
+//
+//                }  else {
+//                    System.out.println("no pueden entrar mas personas");
+//                }
+//            break;
+//            case 2:
+//                System.out.println(500 - capacidadTotal );
+//                break;
+//            case 3:
+//                System.out.println(dineroRecaudado);
+//                break;
+//
+//
+//
+//        }
+// } while(opcion != 0);
+//
+//        System.out.println("Adios");
 
 
 
