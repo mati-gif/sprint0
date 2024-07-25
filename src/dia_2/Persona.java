@@ -82,7 +82,8 @@ public class Persona {
     //------metodos Setter y Getters-----//
 
     public void setNombre(String nombre){//setNombre es el nombre del método. Se usa para cambair el valor del atributo nombre del objeto persona.
-        this.nombre = nombre;//this.nombre: Se refiere al atributo nombre del objeto actual. this. es una referencia al objeto  que  está llamando al método. Es el objeto que yo cree que va a llamar al set
+        this.nombre = nombre;//this.nombre: Se refiere al atributo nombre del objeto actual. this. es una referencia al objeto  que  está llamando al método.
+        // Es el objeto que yo cree que va a llamar al set.
 
         //this . es el objeto que esta llamando al metodo setNombre(), y le va a asignar a this.nombre el valor que esta recibiendo por parametro setNombre() que es nombre
     }
@@ -101,7 +102,13 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad; //this. va al contexto , entonces en este contexto esta haciendo referencia al objeto que llama a este metodo  que yo cree con esta clase.
+        this.edad = edad; //this. va al contexto ,
+        // entonces en este contexto esta haciendo referencia al objeto que llama a este metodo (setEdad() )
+        // que yo cree a partir de la clase persona.
+
+        //this es la instancia del objeto creado. this es el objeto instanciado a partir de la clase persona.
+        //this esta haciendo referencia al objeto ya creado.
+        //dicho tambien: this . esta haciendo referencia a la instancia del objeto creado.
     }
 
     public int getEdad() {
