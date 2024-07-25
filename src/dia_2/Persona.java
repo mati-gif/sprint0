@@ -4,6 +4,7 @@ public class Persona {
 
     private String nombre;//se le pone private adelante de la variable para seguir el princpio del encapsulamiento.
     //y consiste en en ocultar los detalles internos de un objeto y permitir que se acceda a ellos únicamente a través de métodos públicos (getters y setters)
+
     private String apellido;
     private int edad;
     private String dni;
@@ -29,11 +30,12 @@ public class Persona {
 //
 //    }
 
+
     public Persona(String nombre, String apellido, String dni, int edad, double altura, boolean casado,String[] nombreMascotas) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
-        this.edad = edad;
+        this.edad = edad; //this. estas haciendo refencia al objeto que estoy creando o instanciando.
         this.altura = altura;
         this.casado = casado;
         this.nombreMascotas = nombreMascotas;
@@ -80,7 +82,7 @@ public class Persona {
     //------metodos Setter y Getters-----//
 
     public void setNombre(String nombre){//setNombre es el nombre del método. Se usa para cambair el valor del atributo nombre del objeto persona.
-        this.nombre = nombre;//this.nombre: Se refiere al atributo nombre del objeto actual. this es una referencia al objeto en el que se está llamando al método.
+        this.nombre = nombre;//this.nombre: Se refiere al atributo nombre del objeto actual. this. es una referencia al objeto  que  está llamando al método. Es el objeto que yo cree que va a llamar al set
 
         //this . es el objeto que esta llamando al metodo setNombre(), y le va a asignar a this.nombre el valor que esta recibiendo por parametro setNombre() que es nombre
     }
@@ -99,7 +101,7 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        this.edad = edad; //this. va al contexto , entonces en este contexto esta haciendo referencia al objeto que llama a este metodo  que yo cree con esta clase.
     }
 
     public int getEdad() {
