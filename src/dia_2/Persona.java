@@ -2,7 +2,8 @@ package dia_2;
 
 public class Persona {
 
-    private String nombre;
+    private String nombre;//se le pone private adelante de la variable para seguir el princpio del encapsulamiento.
+    //y consiste en en ocultar los detalles internos de un objeto y permitir que se acceda a ellos únicamente a través de métodos públicos (getters y setters)
     private String apellido;
     private int edad;
     private String dni;
