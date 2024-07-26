@@ -15,11 +15,7 @@ public class Persona {
 
     private String apellido;
     private int edad;
-    private String dni;//define un campo de la clase Persona. Este campo es una referencia a un objeto de tipo Dni.
-    //En otras palabras, dni es un objeto de la clase Dni. Esta relación permite establecer una conexión bidireccional entre Dni y Persona.
-    //OSea estoy diciendo que cada objeto Persona puede tener una referencia a un objeto Dni.
-    //Persona tiene un campo Dni dni que se refiere al objeto Dni.
-    //Dni tiene un campo Persona persona que se refiere al objeto Persona.
+    private String dni;
 
     private double altura;
     private Boolean casado;
