@@ -131,13 +131,13 @@ int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
 
 
 
-//        imprimirMenuCalculadora();
+        mostrarMenu();
 
 //ejercicio 10: Crea otro método que retome el punto anterior para poder crear una pequeña calculadora
 // usando switch. Ten en cuenta el caso de la división por 0.
 
 
-//        calcularNumeros();
+        realizarOperaciones();
 
 //ejercicio 11: Crear el algoritmo necesario para poder gestionar el ingreso a una bolera. Deberá contar con un pequeño menú con las siguientes opciones:
 //
@@ -341,57 +341,78 @@ int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
 
 //es parte del ejercicio 9.
 
-//    public static void imprimirMenuCalculadora(){ //es void porque no devuelve ningun valor , solamente imprimi el menu en la consola
-//        String[] opciones = {"Sumar","restar","multiplicar","dividir"};
-//
-//        System.out.println("Menú de la Calculadora:");
-//
-//        for ( int i = 0; i < opciones.length; i++ ){
-//            System.out.println((i + 1) + "."  + opciones[i]);
-//        }
-//
-//        System.out.println("0. Salir");
-//    }
+    public static void mostrarMenu() {//es void porque no devuelve ningun valor , solamente imprimi el menu en la consola
+//        Scanner sc = new Scanner(System.in);
+        System.out.println("Menu de la calculadora \n" +
+                "1. sumar \n" +
+                "2. restar \n" +
+                "3. multiplicar \n" +
+                "4. dividir \n" +
+                "0. salir");
+
+//        int opcion = sc.nextInt();
+
+    }
+
 //es parte del ejercicio 10.
 
-//    public static void calcularNumeros(){
-//        Scanner scanner = new Scanner(System.in);
-//
-//           System.out.println("ingrese una opcion:");
-//        int opcion = scanner.nextInt();
-//
-//
-//        if (opcion != 0) {
-//            System.out.println("ingrese el primer numero:");
-//            int numero1 = scanner.nextInt();
-//
-//            System.out.println("ingrese el segundo numero:");
-//            int numero2 = scanner.nextInt();
-//
-//            switch (opcion){
-//                case 1:
-//                    System.out.println(numero1 + numero2);
-//                    break;
-//                case 2:
-//                    System.out.println(numero1 - numero2);
-//                    break;
-//                case 3 :
-//                    System.out.println(numero1 * numero2);
-//                    break;
-//                case 4 :
-//                    System.out.println((numero2 == 0) ? "Error: el segundo número no puede ser cero" : "El resultado es: " + (numero1 / numero2));
-//                    break;
-//
-//                default:
-//                    System.out.println("la opcion ingresada no es valida");
-//
-//            }
-//
-//        } else{
-//            System.out.println("hasta luego");
-//        }
-//
-//    }
+    public static void realizarOperaciones() {
+
+
+        Scanner sc = new Scanner(System.in);
+        boolean salir = false;
+
+        while (!salir) {
+            mostrarMenu();
+            System.out.println("ingrese una opcion para realizar la operacion");
+            int opcion = sc.nextInt();
+            if(opcion == 0){
+                salir = true;
+                System.out.println("aplicacion terminada");
+                continue;
+            }
+            System.out.println("ingrese el 1er numero");
+            double numero1 = sc.nextInt();
+
+            System.out.println("ingrese el 2do numero");
+            double numero2 = sc.nextInt();
+
+            double resultado = 0;
+
+            switch (opcion){
+                case 1 :
+                    resultado = numero1 + numero2;
+                    System.out.println("el resultado de la suma es : " + resultado);
+                    break;
+                case 2 :
+                    resultado = numero1-numero2;
+                    System.out.println("El resultado de la resta es: " + resultado);
+                    break;
+                case 3 :
+
+                    resultado = numero1*numero2;
+                    System.out.println("El resultado de la multiplicacion es: " + resultado);
+                    break;
+                case 4 :
+                    if (numero1 != 0 && numero2 != 0) {
+                        resultado = numero1/numero2;
+                        System.out.println("El resultado de la division es: " + resultado);
+                    } else {
+                        System.out.println("Error: Division por cero no permitida");
+                    }
+                    break;
+                default:
+                    System.out.println("Opcion no valida");
+                    break;
+
+            }
+
+
+
+        }
+
+
+    }
 
 //es parte del ejercicio 11.
 
