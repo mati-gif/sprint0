@@ -92,20 +92,20 @@ public class Main {
 
 //ejercicio 6: Crea un método que recibe un número y devuelve si es primo o no.
 
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("ingrese un numero para saber si es primo");
-//        int numero = sc.nextInt();
-//        esPrimo(numero);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ingrese un numero para saber si es primo");
+        int numero = sc.nextInt();
+        esPrimo(numero);
 
 
 //ejercicio 7: Crea un método que recibe una matriz de números y
 // devuelve la suma de los números impares.
 
-//        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//
-//        int resultado =  sumaImpares(array);
-//
-//        System.out.println("la suma de los numero impares es " + resultado);
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        int resultado =  sumaImpares(array);
+
+        System.out.println("la suma de los numero impares es " + resultado);
 
 
 
@@ -116,9 +116,9 @@ public class Main {
 // imprime los números pares y la suma de los números primos.
 
 
-//int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
-//
-//        procesarArray(arreglo);
+int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
+
+        procesarArray(arreglo);
 //
 //
 //
@@ -259,86 +259,85 @@ public class Main {
 
 
     //es parte del ejercicio 6.
-//    public static boolean esPrimo(int numero) {
-//
-//        if (numero <= 1) {
-//            return false;  //si el numero es menor o igual a 1 la funcion devuelve false porque todos los numeros menores o iguales a 1 no son primos.
-//        }
-//
-//        for (int i = 2; i <= Math.sqrt(numero); i++) {// El bulce recorre todos los numeros desde 2 hasta la raiz cuadrada del numero.
-//            if (numero % i == 0) {
-//                System.out.println("no es primo");
-//                return false; // No es primo si es divisible por algún número distinto de 1 y él mismo.
-////Si numero es divisible por cualquier i en este rango, la función devuelve false porque significa que numero no es primo.
-//            }
-//        }
-// System.out.println("es primo");
-//        // Si no se encontró ningún divisor, el número es primo
-//        return true;
-//
-//
-//    }
+    public static boolean esPrimo(int numero) {
+
+        if (numero <= 1) {
+            return false;  //si el numero es menor o igual a 1 la funcion devuelve false porque todos los numeros menores o iguales a 1 no son primos.
+        }
+
+        for (int i = 2; i <= Math.sqrt(numero); i++) {// El bulce recorre todos los numeros desde 2 hasta la raiz cuadrada del numero.
+            if (numero % i == 0) {
+                System.out.println("no es primo");
+                return false; // No es primo si es divisible por algún número distinto de 1 y él mismo.
+//Si numero es divisible por cualquier i en este rango, la función devuelve false porque significa que numero no es primo.
+            }
+        }
+ System.out.println("es primo");
+        // Si no se encontró ningún divisor, el número es primo
+        return true;
+
+
+    }
 
 
 
 
 //es parte del ejercicio 7.
 //
-//    public static int sumaImpares(int[] arreglo){
-//
-//        int suma = 0;
-//
-//        for (int i = 0; i < arreglo.length; i++){
-//        int numero = arreglo[i];
-//
-//            if (numero % 2 != 0) {
-//                suma += numero; // Sumar el número impar a la suma
-//            }
-//        }
-//
-//        return suma;
-//    }
+    public static int sumaImpares(int[] arreglo){
+
+        int suma = 0;
+
+        for (int i = 0; i < arreglo.length; i++){
+        int numero = arreglo[i];
+
+            if (numero % 2 != 0) {
+                suma += numero; // Sumar el número impar a la suma
+            }
+        }
+
+        return suma;
+    }
 
 
 
 //es parte del ejercicio 8.
-//
-//    public static int procesarArray(int[] arreglo){
+
+    public static void procesarArray(int[] arreglo){
 //        int sumaPares = 0;
-//        int sumaNumerosPrimos = 0;
-//
-//        for (int i = 0; i < arreglo.length;i++){
-//
-//            int numero = arreglo[i];
-//
-//            if(numero % 2 == 0 ){
-//                sumaPares += numero;
-//
-//            }
-//            if (esNumeroPrimo(numero)) {
-//                sumaNumerosPrimos += numero; // Sumar el número primo a la suma
-//            }
-//        }
-//        System.out.println("La suma de los números pares es: " + sumaPares);
-//        System.out.println("La suma de los números primos es: " + sumaNumerosPrimos);
-//        return sumaPares;
-//    }
+        int sumaNumerosPrimos = 0;
+
+        for (int i = 0; i < arreglo.length;i++){
+
+            int numero = arreglo[i];
+
+            if(numero % 2 == 0 ){
+                System.out.print(numero + " , \n");
+            }
+            if (esNumeroPrimo(numero)) {
+                sumaNumerosPrimos += numero; // Sumar el número primo a la suma
+            }
+        }
+
+        System.out.println("La suma de los números primos es: " + sumaNumerosPrimos);
+
+    }
 
 
-//    public static boolean esNumeroPrimo(int numero){
-//
-//        if (numero <= 1) {
-//            return false;
-//        }
-//        for (int i = 2; i <= Math.sqrt(numero); i++) {
-//            if (numero % i == 0) {
-//                return false;
-//            }
-//        }
-//        return true;
-//
-//
-//    }
+    public static boolean esNumeroPrimo(int numero){
+
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+
+
+    }
 
 //es parte del ejercicio 9.
 
