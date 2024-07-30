@@ -24,7 +24,7 @@ Mascota mascota5 = new Mascota("Luna",2,TipoMascota.TORTUGA);
         persona1.addMascota(mascota2);
         System.out.println(mascota2);
 
-
+//otra forma de hacerlo-----//
         List<Mascota> mascotas = new ArrayList<>();
         mascotas.add(mascota3);
         mascotas.add(mascota4);

@@ -54,7 +54,7 @@ private Scanner scanner;// Esto me sirve para :  crear objetos de esa clase y us
                 "2. Restar \n" +
                 "3. Multiplicar \n" +
                 "4. Dividir \n" +
-                "0. Salir");
+                "5. Salir");
 
     }
 
@@ -66,9 +66,14 @@ while (!bandera) {
     mostrarMenu();
     System.out.println("ingrese una opcion:");
     int opcion = scanner.nextInt();
-    if (opcion == 0) {
+    if (opcion == 5) {
         bandera = true;
         System.out.println("aplicacion terminada");
+        continue;
+    }
+
+    if(opcion < 1 || opcion > 5){
+        System.out.println("Opcion no valida");
         continue;
     }
     System.out.println("ingrese el primer numero:");
@@ -94,7 +99,7 @@ while (!bandera) {
             resultado = calculatorOperations.multiplicar(numero1,numero2);
             break;
         case 4 :
-            if (numero2 != 0) {
+            if (numero1 != 0 || numero2 != 0) {
                 resultado = calculatorOperations.dividir(numero1, numero2);
             } else {
                 System.out.println("Error: División por cero no permitida.");

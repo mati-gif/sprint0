@@ -18,7 +18,7 @@ public class Main {
 
 //        mensajeBienvenida();
 
-        //ejercicio 3: Crea un pequeño programa que te permita ingresar 3 números
+//ejercicio 3: Crea un pequeño programa que te permita ingresar 3 números
         // e imprimir a través de la consola cuál es el mayor.
 
         //Scanner scanner = new Scanner(System.in);
@@ -56,7 +56,7 @@ public class Main {
 //        }
 
 
-        //ejercicio 4: Crea un pequeño programa que te permita ingresar un número e
+//ejercicio 4: Crea un pequeño programa que te permita ingresar un número e
         // imprimir a través de la consola si es par o impar.
 
 //        System.out.println("ingrese el primer numero para saber si es par o impar:");
@@ -92,13 +92,10 @@ public class Main {
 
 //ejercicio 6: Crea un método que recibe un número y devuelve si es primo o no.
 
-//        int numero = 5;
-//
-//        if (esPrimo(numero)) {
-//            System.out.println(numero + " es un número primo.");
-//        } else {
-//            System.out.println(numero + " no es un número primo.");
-//        }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("ingrese un numero para saber si es primo");
+//        int numero = sc.nextInt();
+//        esPrimo(numero);
 
 
 //ejercicio 7: Crea un método que recibe una matriz de números y
@@ -265,20 +262,25 @@ public class Main {
 //    public static boolean esPrimo(int numero) {
 //
 //        if (numero <= 1) {
-//            return false;
-//        }
-
-//        for (int i = 2; i <= Math.sqrt(numero); i++) {
-//            if (numero % i == 0) {
-//                return false; // No es primo si es divisible por algún número distinto de 1 y él mismo
-//            }
+//            return false;  //si el numero es menor o igual a 1 la funcion devuelve false porque todos los numeros menores o iguales a 1 no son primos.
 //        }
 //
+//        for (int i = 2; i <= Math.sqrt(numero); i++) {// El bulce recorre todos los numeros desde 2 hasta la raiz cuadrada del numero.
+//            if (numero % i == 0) {
+//                System.out.println("no es primo");
+//                return false; // No es primo si es divisible por algún número distinto de 1 y él mismo.
+////Si numero es divisible por cualquier i en este rango, la función devuelve false porque significa que numero no es primo.
+//            }
+//        }
+// System.out.println("es primo");
 //        // Si no se encontró ningún divisor, el número es primo
 //        return true;
 //
 //
 //    }
+
+
+
 
 //es parte del ejercicio 7.
 //

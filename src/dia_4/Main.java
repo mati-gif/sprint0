@@ -14,7 +14,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        CalculatorOperations calculadora = new Calculadora();
+        Calculadora calculadora = new Calculadora();
 
         CalculatorMenu menu = new CalculatorWithMenu(scanner, calculadora);
         menu.calcularResultado();
