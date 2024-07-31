@@ -103,20 +103,16 @@ public class Main {
 
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        int resultado =  sumaImpares(array);
+        int resultado = sumaImpares(array);
 
         System.out.println("la suma de los numero impares es " + resultado);
-
-
-
-
 
 
 //ejercicio 8: Crea un método que recibe una matriz de números e
 // imprime los números pares y la suma de los números primos.
 
 
-int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
+        int[] arreglo = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         procesarArray(arreglo);
 //
@@ -130,117 +126,102 @@ int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
 // agregando la opción 0 para salir del mismo.
 
 
-
-        mostrarMenu();
+//        mostrarMenu();
 
 //ejercicio 10: Crea otro método que retome el punto anterior para poder crear una pequeña calculadora
 // usando switch. Ten en cuenta el caso de la división por 0.
 
 
-        realizarOperaciones();
+//        realizarOperaciones();
 
 //ejercicio 11: Crear el algoritmo necesario para poder gestionar el ingreso a una bolera. Deberá contar con un pequeño menú con las siguientes opciones:
 //
 //Entrada de datos.
-//
+
 //Capacidad disponible.
-//
+
 //Dinero recaudado.
-//
+
 //Cerrar sesión en el sistema.
 
-//int opcion = 0;
-//int capacidadTotal = 0;
-//int dineroRecaudado = 0;
+//        int opcion = 0;
+//        int capacidadTotal = 0;
+//        int dineroRecaudado = 0;
 //
 //        Scanner scanner = new Scanner(System.in);
 //
-//do {
+//        do {
+//            System.out.println("Ingrese una opción");
+//            System.out.println("1. Ingrese sus datos");
+//            System.out.println("2. Capacidad disponible");
+//            System.out.println("3. Dinero recaudado");
+//            System.out.println("0. Salir");
 //
-//        System.out.println("ingrese una opcion");
+//            opcion = scanner.nextInt();
 //
-//        System.out.println("1.Ingrese sus datos");
-//        System.out.println("2.Capacidad disponbible");
-//        System.out.println("3.Dinero recaudado");
-//        System.out.println("0.Salir");
+//            switch (opcion) {
+//                case 1:
+//                    if (capacidadTotal < 500) {
+//                        scanner.nextLine();  // Limpiar el buffer
 //
-//         opcion = scanner.nextInt();
+//                        System.out.println("Ingrese su nombre");
+//                        String nombre = scanner.nextLine();
+//                        System.out.println("Ingrese su DNI");
+//                        int DNI = scanner.nextInt();
+//                        System.out.println("Ingrese su edad");
+//                        int edad = scanner.nextInt();
+//                        scanner.nextLine();  // Limpiar el buffer
 //
+//                        if (edad >= 21) {
+//                            System.out.println("Puedes entrar");
+//                            System.out.println("¿Tienes pase? (si/no)");
+//                            String tienePase = scanner.nextLine();
 //
-//        switch (opcion){
-//            case 1 :
-//                if(capacidadTotal < 500 ){
-//                     scanner = new Scanner(System.in);
+//                            if (tienePase.equalsIgnoreCase("si")) {
+//                                System.out.println("¿Tienes pase VIP o normal?");
+//                                String pase = scanner.nextLine();
 //
-//                    System.out.println("ingrese su nombre");
-//                    String nombre = scanner.nextLine();
-//                    System.out.println("ingrese su DNI");
-//                    int DNI = scanner.nextInt();
-//                    System.out.println("ingrese su edad");
-//                    int edad = scanner.nextInt();
-//                    if ( edad >= 21){
+//                                if (pase.equalsIgnoreCase("vip")) {
+//                                    System.out.println("Entras gratis");
+//                                    capacidadTotal++;
+//                                } else {
+//                                    System.out.println("Entras con pase normal");
+//                                    capacidadTotal++;
+//                                    dineroRecaudado += 1500;
+//                                }
+//                            } else {
+//                                System.out.println("¿Quieres comprar un pase? (vip/normal)");
+//                                String pase = scanner.nextLine();
 //
-//                        System.out.println("puedes entrar");
-//
-//                        System.out.println("tienes pase?");
-//                        scanner = new Scanner(System.in);
-//
-//                        String pase = scanner.nextLine();
-//
-//                        if (pase.equals("si")){
-//
-//
-//
-//                            System.out.println("Tenes vip o normal?");
-//
-//                            pase = scanner.nextLine();
-//                            if (pase.equals("vip")){
-//                                System.out.println("Entras gratis");
-//                                capacidadTotal++;
-//                                dineroRecaudado += 2000;
-//                            } else{
-//                                System.out.println("entra ");
-//                                capacidadTotal++;
-//                                dineroRecaudado += 1500;
-//
+//                                if (pase.equalsIgnoreCase("vip")) {
+//                                    System.out.println("Compraste un pase VIP");
+//                                    capacidadTotal++;
+//                                    dineroRecaudado += 2000;
+//                                } else {
+//                                    System.out.println("Compraste un pase normal");
+//                                    capacidadTotal++;
+//                                    dineroRecaudado += 1500;
+//                                }
 //                            }
-//                        } else{
-//                            System.out.println("Queres comprar un pase? vip o normal?");
-//                            pase = scanner.nextLine();
-//
-//                            if (pase.equals("vip")){
-//                                System.out.println("Entras gratis");
-//                                capacidadTotal++;
-//                                dineroRecaudado += 2000;
-//                            } else{
-//                                System.out.println("entra ");
-//                                capacidadTotal++;
-//                                dineroRecaudado += 1500;
-//
-//                            }
+//                        } else {
+//                            System.out.println("Adiós");
 //                        }
-//
-//                    } else{
-//                        System.out.println("adios");
+//                    } else {
+//                        System.out.println("No pueden entrar más personas");
 //                    }
+//                    break;
+//                case 2:
+//                    System.out.println("Capacidad disponible: " + (500 - capacidadTotal));
+//                    break;
+//                case 3:
+//                    System.out.println("Dinero recaudado: " + dineroRecaudado);
+//                    break;
+//            }
+//        } while (opcion != 0);
 //
-//                }  else {
-//                    System.out.println("no pueden entrar mas personas");
-//                }
-//            break;
-//            case 2:
-//                System.out.println(500 - capacidadTotal );
-//                break;
-//            case 3:
-//                System.out.println(dineroRecaudado);
-//                break;
-//
-//
-//
-//        }
-// } while(opcion != 0);
-//
-//        System.out.println("Adios");
+//        System.out.println("Adiós");
+
+    }
 
 
 
@@ -248,8 +229,6 @@ int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
 
 
 
-
-}
 
 
     //es parte del ejercicio 2.
@@ -341,78 +320,78 @@ int[] arreglo = {1,2,3,4,5,6,7,8,9,10};
 
 //es parte del ejercicio 9.
 
-    public static void mostrarMenu() {//es void porque no devuelve ningun valor , solamente imprimi el menu en la consola
-//        Scanner sc = new Scanner(System.in);
-        System.out.println("Menu de la calculadora \n" +
-                "1. sumar \n" +
-                "2. restar \n" +
-                "3. multiplicar \n" +
-                "4. dividir \n" +
-                "0. salir");
-
-//        int opcion = sc.nextInt();
-
-    }
+//    public static void mostrarMenu() {//es void porque no devuelve ningun valor , solamente imprimi el menu en la consola
+////        Scanner sc = new Scanner(System.in);
+//        System.out.println("Menu de la calculadora \n" +
+//                "1. sumar \n" +
+//                "2. restar \n" +
+//                "3. multiplicar \n" +
+//                "4. dividir \n" +
+//                "0. salir");
+//
+////        int opcion = sc.nextInt();
+//
+//    }
 
 //es parte del ejercicio 10.
 
-    public static void realizarOperaciones() {
-
-
-        Scanner sc = new Scanner(System.in);
-        boolean salir = false;
-
-        while (!salir) {
-            mostrarMenu();
-            System.out.println("ingrese una opcion para realizar la operacion");
-            int opcion = sc.nextInt();
-            if(opcion == 0){
-                salir = true;
-                System.out.println("aplicacion terminada");
-                continue;
-            }
-            System.out.println("ingrese el 1er numero");
-            double numero1 = sc.nextInt();
-
-            System.out.println("ingrese el 2do numero");
-            double numero2 = sc.nextInt();
-
-            double resultado = 0;
-
-            switch (opcion){
-                case 1 :
-                    resultado = numero1 + numero2;
-                    System.out.println("el resultado de la suma es : " + resultado);
-                    break;
-                case 2 :
-                    resultado = numero1-numero2;
-                    System.out.println("El resultado de la resta es: " + resultado);
-                    break;
-                case 3 :
-
-                    resultado = numero1*numero2;
-                    System.out.println("El resultado de la multiplicacion es: " + resultado);
-                    break;
-                case 4 :
-                    if (numero1 != 0 && numero2 != 0) {
-                        resultado = numero1/numero2;
-                        System.out.println("El resultado de la division es: " + resultado);
-                    } else {
-                        System.out.println("Error: Division por cero no permitida");
-                    }
-                    break;
-                default:
-                    System.out.println("Opcion no valida");
-                    break;
-
-            }
-
-
-
-        }
-
-
-    }
+//    public static void realizarOperaciones() {
+//
+//
+//        Scanner sc = new Scanner(System.in);
+//        boolean salir = false;
+//
+//        while (!salir) {
+//            mostrarMenu();
+//            System.out.println("ingrese una opcion para realizar la operacion");
+//            int opcion = sc.nextInt();
+//            if(opcion == 0){
+//                salir = true;
+//                System.out.println("aplicacion terminada");
+//                continue;
+//            }
+//            System.out.println("ingrese el 1er numero");
+//            double numero1 = sc.nextInt();
+//
+//            System.out.println("ingrese el 2do numero");
+//            double numero2 = sc.nextInt();
+//
+//            double resultado = 0;
+//
+//            switch (opcion){
+//                case 1 :
+//                    resultado = numero1 + numero2;
+//                    System.out.println("el resultado de la suma es : " + resultado);
+//                    break;
+//                case 2 :
+//                    resultado = numero1-numero2;
+//                    System.out.println("El resultado de la resta es: " + resultado);
+//                    break;
+//                case 3 :
+//
+//                    resultado = numero1*numero2;
+//                    System.out.println("El resultado de la multiplicacion es: " + resultado);
+//                    break;
+//                case 4 :
+//                    if (numero1 != 0 && numero2 != 0) {
+//                        resultado = numero1/numero2;
+//                        System.out.println("El resultado de la division es: " + resultado);
+//                    } else {
+//                        System.out.println("Error: Division por cero no permitida");
+//                    }
+//                    break;
+//                default:
+//                    System.out.println("Opcion no valida");
+//                    break;
+//
+//            }
+//
+//
+//
+//        }
+//
+//
+//    }
 
 //es parte del ejercicio 11.
 

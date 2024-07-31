@@ -158,14 +158,16 @@ public class Persona {
         this.mascotas = mascotas;
     }
 
-    public void addMascota(Mascota mascota) {
+    public void addMascota(Mascota mascota) {// aca estoy añadiendo una mascota a una lista de mascotas y estableciendo una relación bidireccional entre la mascota y la persona.
         this.mascotas.add(mascota); //Agrego a la lista de mascotas a la mascota que recibe por parametro.
+        //this.mascota es una lista que pertenece a la clase Mascota . Es la lista de mascotas de la instancia (objeto) actual de la clase Persona.
         mascota.setPersona(this); //Asigno la persona a la mascota que recibe por parametro.
-
+// mascota.setPersona llama al método setPersona del objeto Mascota.
+ //(this) se refiere a la instancia (objeto) actual de la clase en la que se encuentra este método ( la clase es Persona).
     }
 
-    @Override
-    public String toString() {
+    @Override //Estoy sobreescribiendo el metodo toString() de la clase Object => Object es la clase base de la cual todas las clases de JAVA heredan.
+    public String toString() {// Estoy definidiendo como se va a representar mi objeto cuando lo convierto en una cadena
         return "Persona{" +
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +

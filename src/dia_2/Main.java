@@ -29,6 +29,7 @@ public class Main {
 
 
 
+
 //son metodos del objeto persona.Asi mismo estos metodos pertenencen al objeto persona
 //persona.saltar();//lllama al metodo saltar del objeto persona.
 

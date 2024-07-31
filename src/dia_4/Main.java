@@ -16,7 +16,7 @@ public class Main {
 
         Calculadora calculadora = new Calculadora();
 
-        CalculatorMenu menu = new CalculatorWithMenu(scanner, calculadora);
+        CalculatorWithMenu menu = new CalculatorWithMenu(scanner, calculadora);
         menu.calcularResultado();
 
     }
